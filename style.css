@@ -669,6 +669,11 @@ nav {
   line-height: 1.7;
 }
 
+.project-btns{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Education Section */
 .education-container {
   max-width: 800px;

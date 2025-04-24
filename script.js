@@ -104,3 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   reveal();
 });
+
+
+// Alert 
+
+let alertBtn = document.querySelector(".alert-btn");
+alertBtn.addEventListener("click", function () {
+  alert("Please click on DESKTOP SITE because this is only basic clone");
+});
