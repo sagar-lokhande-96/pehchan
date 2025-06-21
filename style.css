@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
   --primary: #2563eb;
-  --primary-dark: #0f3bb3;
+  --primary-dark: #2c52b8;
   --secondary: #3b82f6;
   --dark: #1e293b;
   --light: #f8fafc;
@@ -177,6 +177,14 @@ nav {
   padding: 1rem 0;
 }
 
+.logo-circle{
+  background-color: rgb(32, 63, 128);
+  height: auto;
+  width: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
@@ -235,36 +243,36 @@ nav {
   transform: rotate(90deg);
 }
 
-/* Hero Section */
 .hero {
   padding: 8rem 1rem 6rem;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  background-size: 200% 200%;
-  animation: gradientBg 15s ease infinite;
+  background: url("./images/abc.jpeg") center center / cover no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  position: relative;
   color: white;
   text-align: center;
-  position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
+/* Add overlay */
 .hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  background: url("/api/placeholder/1000/800") center/cover no-repeat;
-  opacity: 0.1;
-  animation: pulse 10s infinite ease-in-out;
-}
-
-.hero-content {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  background: rgba(32, 63, 128, 0.834); /* your desired overlay color */
   z-index: 2;
 }
+
+/* Ensure text shows above overlay */
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
 
 .hero h1 {
   font-size: 3.5rem;

@@ -88,9 +88,9 @@ window.addEventListener("scroll", function () {
   const heroSection = document.querySelector(".hero");
   const scrollPosition = window.pageYOffset;
 
-  if (scrollPosition <= heroSection.offsetHeight) {
-    heroSection.style.backgroundPositionY = scrollPosition * 0.5 + "px";
-  }
+  // if (scrollPosition <= heroSection.offsetHeight) {
+  //   heroSection.style.backgroundPositionY = scrollPosition * 0.5 + "px";
+  // }
 });
 
 // Typing animation for hero section
